@@ -9,6 +9,4 @@ html body{
 #root {
     @apply bg-latar;
     min-height: 100vh;
-    overflow-x: hidden;
-    position: relative;
   }
