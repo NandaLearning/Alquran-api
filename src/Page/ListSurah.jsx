@@ -38,8 +38,8 @@ const ListSurah = () => {
   }, [searchQuery, data]);
 
   return (
-    <div>
-      <div className="p-4 justify-between flex flex-col mx-10 w-full">
+    <div className=" bg-latar min-h-screen">
+      <div className="p-4 justify-between flex flex-col  w-full">
         <div className="mt-5">
           <Search
             value={searchQuery}
