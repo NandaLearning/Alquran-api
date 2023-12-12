@@ -37,7 +37,7 @@ const IsiSurah = () => {
     <div className=" scroll-smooth text-black">
       <div className=" flex p-4 justify-between" data-aos="fade-up">
         <TitikUi/>
-      <p className=" text-center font-bold text-lg p-4 md:text-2xl">بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ</p>
+      <p className=" text-center font-bold text-sm p-4 md:text-2xl">بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ</p>
       <p className=" text-lg font-bold md:text-2xl">{surahData.nama}</p>
       
       </div>
