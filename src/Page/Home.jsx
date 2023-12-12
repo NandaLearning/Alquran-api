@@ -37,9 +37,7 @@ const Home = () => {
         <div className=" p-10 justify-end items-end flex my-20" data-aos = "fade-up " data-aos-duration = "2000">
        <Link to={"/settings"}><SettingsButton/></Link> 
         </div>
-
         <Footer/>
-
     </div>
   )
 }

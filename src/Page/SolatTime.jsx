@@ -37,6 +37,7 @@ const SolatTime = () => {
         </div>
 
         <Footer/>
+
     </div>
   )
 }

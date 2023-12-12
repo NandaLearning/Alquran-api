@@ -6,3 +6,9 @@ html body{
     flex-wrap: nowrap;
 }
 
+#root {
+    @apply bg-latar;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
