@@ -45,7 +45,7 @@ const IsiSurah = () => {
         
         <div key={ayat.id} data-aos = "fade-up">
           
-          <div className=" bg-warnalist p-5 mx-8 rounded-xl space-y-4 mt-7 ">
+          <div className=" bg-warnalist p-4 mx-7 md:p-3 md:mx-10 rounded-xl space-y-4 mt-7 ">
             <audio src={ayat.audio}></audio>
           <p className=" text-end font-bold text-xl">{ayat.ar}</p>
           <p className=" font-bold text-sm">{ayat.idn}</p>
