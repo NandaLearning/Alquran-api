@@ -5,19 +5,11 @@ import Settings from "./Page/Settings";
 import IsiSurah from "./Page/IsiSurah";
 import SolatTime from "./Page/SolatTime";
 import ListWaktuSolat from "./Page/ListWaktuSolat";
-import { useState } from "react";
 
 const App = () => {
-  const [isDarkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
-  };
-
-  const bgColor = isDarkMode ? "bg-slate-500" : "bg-latar";
 
   return (
-    <div className={`min-h-screen ${bgColor}`}>
+    <div className=" bg-latar min-h-full">
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +17,7 @@ const App = () => {
           <Route path="/listwaktusolat" element={<ListWaktuSolat />} />
           <Route path="/listsurah" element={<ListSurah />} />
           <Route path="/isisurah/:id" element={<IsiSurah />} />
-          <Route path="/settings" element={<Settings toggleDarkMode={toggleDarkMode} />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Router>
     </div>

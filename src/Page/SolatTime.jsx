@@ -7,6 +7,7 @@ import "aos/dist/aos.css"
 import SettingsButton from "../Components/SettingsButton"
 import NavigasiSolat from "../Components/Fitur/NavigasiSolat"
 import NightBrightMode from "../Components/Fitur/NightBrightMode"
+import Footer from "../Components/Footer"
 
 const SolatTime = () => {
 
@@ -35,6 +36,7 @@ const SolatTime = () => {
        <Link to={"/settings"}><SettingsButton/></Link> 
         </div>
 
+        <Footer/>
     </div>
   )
 }
