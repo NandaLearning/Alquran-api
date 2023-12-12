@@ -6,6 +6,7 @@ import TitikUi from "../Components/TitikUi"
 import Aos from "aos"
 import "aos/dist/aos.css"
 import SettingsButton from "../Components/SettingsButton"
+import NightBrightMode from "../Components/Fitur/NightBrightMode"
 
 const Home = () => {
 
@@ -26,7 +27,7 @@ const Home = () => {
             <div className=" mt-4" data-aos="fade-up" data-aos-duration="2000">
             <Link to={"/solattime"}><Navigasi/></Link>
             </div>
-            <img src="sleep.png" className=" h-5 md:h-8"></img>
+            <NightBrightMode/>
         </div>
         <div className=" p-4 flex justify-center items-center mt-24" data-aos="fade-up" data-aos-duration="2000">
           <Link to={"/listsurah"}><CardLoby img="lampu.png" text="القرآن الكريم" text2="AL-Quran"/></Link>  

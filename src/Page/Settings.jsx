@@ -18,6 +18,7 @@ const Settings = () => {
       </div>
     </div>
     <div className=" bg-white w-full border h-20">
+      
     </div>
     </div>
     </div>

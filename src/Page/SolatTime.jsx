@@ -6,14 +6,13 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 import SettingsButton from "../Components/SettingsButton"
 import NavigasiSolat from "../Components/Fitur/NavigasiSolat"
+import NightBrightMode from "../Components/Fitur/NightBrightMode"
 
 const SolatTime = () => {
 
     useEffect(() => {
         Aos.init()
     },[])
-
-
 
   return (
     <div className=" text-black" >
@@ -26,7 +25,7 @@ const SolatTime = () => {
             <div className=" mt-4" data-aos="fade-up" data-aos-duration="2000">
             <Link to={"/"}><NavigasiSolat /></Link>
             </div>
-            <img src="sleep.png" className=" h-6 md:h-8"></img>
+            <NightBrightMode/>
         </div>
         <div className=" p-4 flex justify-center items-center mt-24" data-aos="fade-up" data-aos-duration="2000">
           <Link to={"/listwaktusolat"}><CardLoby img="time.png" text="وقت الصلاة" text2="Solat Time"/></Link>  

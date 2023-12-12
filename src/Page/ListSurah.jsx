@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Search from "../Components/Fitur/Search";
 import { Link } from "react-router-dom";
 import Loading from "../Components/Fitur/Loading";
+import { useState,useEffect } from "react";
 
 const ListSurah = () => {
   const [data, setData] = useState([]);
