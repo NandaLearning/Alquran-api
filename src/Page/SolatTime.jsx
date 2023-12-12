@@ -32,7 +32,7 @@ const SolatTime = () => {
           <Link to={"/listwaktusolat"}><CardLoby img="time.png" text="وقت الصلاة" text2="Solat Time"/></Link>  
         </div>
 
-        <div className=" p-10 justify-end items-end flex my-20">
+        <div className=" p-10 justify-end items-end flex my-20" data-aos = "fade-up " data-aos-duration = "2000">
        <Link to={"/settings"}><SettingsButton/></Link> 
         </div>
 

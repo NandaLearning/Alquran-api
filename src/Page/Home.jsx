@@ -32,7 +32,7 @@ const Home = () => {
           <Link to={"/listsurah"}><CardLoby img="lampu.png" text="القرآن الكريم" text2="AL-Quran"/></Link>  
         </div>
 
-        <div className=" p-10 justify-end items-end flex my-20">
+        <div className=" p-10 justify-end items-end flex my-20" data-aos = "fade-up " data-aos-duration = "2000">
        <Link to={"/settings"}><SettingsButton/></Link> 
         </div>
 
