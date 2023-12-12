@@ -1,6 +1,6 @@
 const CardLoby = (props) => {
   return (
-    <div className=" w-80 h-40 md:w-[900px] md:h-40 xl:w-[1000px] bg-white drop-shadow-lg rounded-xl font-bold">
+    <div className=" w-80 h-40 md:w-[900px] md:h-96 xl:w-[1000px] bg-white drop-shadow-lg rounded-xl font-bold">
       <div className=" p-1 ml-2">
         <img src={`${props.img}`} className=" float-left h-40"></img>
         <p className=" mt-8 text-lg md:text-2xl">{`${props.text}`}</p>
