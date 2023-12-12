@@ -4,6 +4,7 @@ import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import TitikUi from "../Components/TitikUi";
+import Footer from "../Components/Footer";
 const IsiSurah = () => {
   const { id } = useParams();
   const [surahData, setSurahData] = useState(null);
@@ -53,6 +54,9 @@ const IsiSurah = () => {
          </div>
         </div>
       ))}
+      <div className=" mt-12">
+      <Footer/>
+      </div>
     </div>
   );
 };
