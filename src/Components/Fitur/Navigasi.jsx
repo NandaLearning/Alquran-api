@@ -5,7 +5,6 @@ const Navigasi = () => {
         <div className="flex justify-center items-center space-x-3">
             <div className=" mt-2">
         <ButtonNavigasi bg="bg-black" text="Home" color="text-white"/>
-        <ButtonNavigasi text="Solat Time" color="text-slate-500"/>
             </div>
         </div>
       </div>

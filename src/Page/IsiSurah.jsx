@@ -8,10 +8,11 @@ import Footer from "../Components/Footer";
 const IsiSurah = () => {
   const { id } = useParams();
   const [surahData, setSurahData] = useState(null);
+  const [mode] = useState(localStorage.getItem("mode") === "dark");
 
   useEffect(() => {
     Aos.init();
-  },[])
+  }, []);
 
   useEffect(() => {
     const fetchSurahData = async () => {
@@ -29,13 +30,11 @@ const IsiSurah = () => {
   }, [id]);
 
   if (!surahData) {
-    return;
+    return null; // Menampilkan pesan loading atau apa pun yang sesuai
   }
 
-  
-
   return (
-    <div className=" scroll-smooth text-black">
+    <div className={`scroll-smooth text-black ${mode && "bg-slate-600"}`}>
       <div className=" flex p-4 justify-between" data-aos="fade-up">
         <TitikUi/>
       <p className=" text-center font-bold text-sm p-4 md:text-2xl">بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ</p>

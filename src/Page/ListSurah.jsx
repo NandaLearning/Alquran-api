@@ -32,6 +32,8 @@ const ListSurah = () => {
     Aos.init();
   }, []);
 
+  const [mode] = useState(localStorage.getItem("mode") === "dark");
+
   useEffect(() => {
     // Filter surahs based on the search query
     const filteredSurahs = data.filter((item) => {
@@ -44,7 +46,7 @@ const ListSurah = () => {
   }, [searchQuery, data]);
 
   return (
-    <div className="bg-latar min-h-screen">
+    <div className={`bg-latar min-h-screen ${mode && "bg-slate-600"}`}>
       <div className="p-4 justify-between flex flex-col w-full">
         <div className="mt-5">
           <Search
