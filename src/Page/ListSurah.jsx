@@ -29,8 +29,12 @@ const ListSurah = () => {
   }, []);
 
   useEffect(() => {
-    Aos.init();
+    const initAos = async () => {
+      await Aos.init();
+    };
+    initAos();
   }, []);
+  
 
   const [mode] = useState(localStorage.getItem("mode") === "dark");
 
