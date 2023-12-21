@@ -6,10 +6,6 @@ html body{
 
 }
 
-*{
-    overflow-x: hidden;
-}
-
 #root {
     @apply bg-latar;
     min-height: 100vh;

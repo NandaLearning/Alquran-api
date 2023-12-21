@@ -26,7 +26,7 @@ const Home = () => {
   };
 
   return (
-    <div className={`text-black ${mode && "bg-slate-600 min-h-screen"}`}>
+    <div className={` overflow-x-hidden text-black ${mode && "bg-slate-600 min-h-screen"}`}>
       <div className="flex justify-between p-4">
         <div
           data-aos="fade-right"
