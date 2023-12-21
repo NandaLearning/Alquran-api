@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import Search from "../Components/Fitur/Search";
 import { Link } from "react-router-dom";
 import Loading from "../Components/Fitur/Loading";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Footer from "../Components/Footer";
 
 const ListSurah = () => {
@@ -14,22 +14,27 @@ const ListSurah = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios
-      .get("https://quran-api.santrikoding.com/api/surah")
-      .then((res) => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("https://quran-api.santrikoding.com/api/surah");
         setData(res.data);
-        setFilteredData(res.data); // Set filteredData initially with all surahs
-      })
-      .catch((error) => {
+        setFilteredData(res.data);
+      } catch (error) {
         console.log(error);
-      })
-      .finally(() => {
-        setLoading(false); // Set loading to false after data is fetched
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
-    Aos.init();
-    
+  useEffect(() => {
+    const initAos = async () => {
+      await Aos.init();
+    };
+    initAos();
+  }, []);
 
   const [mode] = useState(localStorage.getItem("mode") === "dark");
 
@@ -56,9 +61,9 @@ const ListSurah = () => {
       </div>
 
       {loading ? (
-        <div className=" p-4 justify-center items-center grid">
-          <Loading/>
-          </div>
+        <div className="p-4 justify-center items-center grid">
+          <Loading />
+        </div>
       ) : (
         filteredData.map((item) => (
           <Link key={item.id} to={`/isisurah/${item.nomor}`}>
@@ -81,8 +86,8 @@ const ListSurah = () => {
           </Link>
         ))
       )}
-      <div className=" mt-12">
-        <Footer/>
+      <div className="mt-12">
+        <Footer />
       </div>
     </div>
   );
