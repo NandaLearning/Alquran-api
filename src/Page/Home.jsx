@@ -41,7 +41,7 @@ const Home = () => {
             <Navigasi />
           </Link>
         </div>
-        <button onClick={toggleMode}>
+        <button onClick={toggleMode} data-aos="fade-left" data-aos-duration="2000">
           <NightBrightMode />
         </button>
       </div>
