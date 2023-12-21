@@ -26,37 +26,39 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen overflow-x-hidden text-black">
-      <div className="flex-grow">
-      <div className="flex justify-between p-4">
-        <div
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-          data-aos-duration="1000"
-        >
-          <TitikUi />
+    <div className={` overflow-x-hidden text-black ${mode && "bg-slate-600 min-h-screen"}`}>
+      <div className="flex flex-col min-h-screen">
+        <div className="flex-grow">
+          <div className="flex justify-between p-4">
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              data-aos-duration="1000"
+            >
+              <TitikUi />
+            </div>
+            <div className="mt-4" data-aos="fade-up" data-aos-duration="2000">
+              <Link to={"/solattime"}>
+                <Navigasi />
+              </Link>
+            </div>
+            <button onClick={toggleMode} data-aos="fade-left" data-aos-duration="2000">
+              <NightBrightMode />
+            </button>
+          </div>
+          <div
+            className="p-4 flex justify-center items-center mt-24"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <Link to={"/listsurah"}>
+              <CardLoby img="lampu.png" text="القرآن الكريم" text2="AL-Quran" />
+            </Link>
+          </div>
         </div>
-        <div className="mt-4" data-aos="fade-up" data-aos-duration="2000">
-          <Link to={"/solattime"}>
-            <Navigasi />
-          </Link>
-        </div>
-        <button onClick={toggleMode} data-aos="fade-left" data-aos-duration="2000">
-          <NightBrightMode />
-        </button>
+        <Footer />
       </div>
-      <div
-        className="p-4 flex justify-center items-center mt-24"
-        data-aos="fade-up"
-        data-aos-duration="2000"
-      >
-        <Link to={"/listsurah"}>
-          <CardLoby img="lampu.png" text="القرآن الكريم" text2="AL-Quran" />
-        </Link>
-      </div>
-      </div>
-      <Footer />
     </div>
   );
 };
