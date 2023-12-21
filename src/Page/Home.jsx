@@ -26,7 +26,8 @@ const Home = () => {
   };
 
   return (
-    <div className={` overflow-x-hidden text-black ${mode && "bg-slate-600 min-h-screen"}`}>
+    <div className="flex flex-col min-h-screen overflow-x-hidden text-black">
+      <div className="flex-grow">
       <div className="flex justify-between p-4">
         <div
           data-aos="fade-right"
@@ -53,6 +54,7 @@ const Home = () => {
         <Link to={"/listsurah"}>
           <CardLoby img="lampu.png" text="القرآن الكريم" text2="AL-Quran" />
         </Link>
+      </div>
       </div>
       <Footer />
     </div>
