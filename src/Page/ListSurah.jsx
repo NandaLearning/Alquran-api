@@ -68,7 +68,7 @@ const ListSurah = () => {
             <div className="p-3 mr-5 justify-end items-end grid">
               <div
                 className="w-[300px] h-28 bg-warnalist text-white rounded-xl md:w-[500px]"
-                data-aos="fade-up"
+                data-aos="fade-left"
               >
                 <div className="flex justify-between">
                   <p className="text-start p-2 font-bold">{item.jumlah_ayat}</p>
