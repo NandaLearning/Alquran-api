@@ -48,7 +48,7 @@ const ListSurah = () => {
   }, [searchQuery, data]);
 
   return (
-    <div className={`bg-latar min-h-screen ${mode && "bg-slate-600 overflow-x-hidden"}`}>
+    <div className={`bg-latar min-h-screen ${mode && "bg-slate-600 "} overflow-x-hidden`}>
       <div className="p-4 justify-between flex flex-col w-full">
         <div className="mt-5">
           <Search
